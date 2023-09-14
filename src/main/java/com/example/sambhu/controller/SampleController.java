@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class SampleController {
     private final SampleService service;
 
-    @PostMapping("/")
+    @PostMapping
     public ResponseEntity<SampleResponse> getSample(@RequestBody SampleRequest sampleRequest){
         return ResponseEntity.ok(service.getSampleResponse(sampleRequest));
     }
